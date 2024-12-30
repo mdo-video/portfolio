@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mdo.video</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <header>
+    <h1>
+     <img src="images/logo.png" alt="Logo mdo" class="logo">
+     <span class="highlight">mdo</span>.video</h1>
+  </header>
+
+
+
+  <main>
+    <div class="gallery">
+      <!-- Sostituisci i link alle anteprime delle immagini e video con i tuoi lavori -->
+      
+      <div class="item">
+        <a href="images/img0.jpg" class="preview-link">
+          <img src="images/img0.jpg" alt="Anteprima Lavoro 1">
+        </a>
+      </div>
+
+
+      <div class="item">
+        <a href="images/img0.jpg" class="preview-link">
+          <img src="images/img0.jpg" alt="Anteprima Lavoro 2">
+        </a>
+      </div>
+
+
+      <div class="item">
+        <a href="images/img0.jpg" class="preview-link">
+          <img src="images/img0.jpg" alt="Anteprima Lavoro 3">
+        </a>
+      </div>
+
+
+      <div class="item">
+        <a href="images/img0.jpg" class="preview-link">
+          <img src="images/img0.jpg" alt="Anteprima Lavoro 4">
+        </a>
+      </div>
+
+
+      <div class="item">
+        <a href="images/img0.jpg" class="preview-link">
+          <img src="images/img0.jpg" alt="Anteprima Lavoro 5">
+        </a>
+      </div>
+
+
+      <div class="item">
+        <a href="images/img0.jpg" class="preview-link">
+          <img src="images/img0.jpg" alt="Anteprima Lavoro 6">
+        </a>
+      </div>
+
+
+     <div class="item">
+        <a href="images/img0.jpg" class="preview-link">
+          <img src="images/img0.jpg" alt="Anteprima Lavoro 7">
+        </a>
+      </div>
+
+
+     <div class="item">
+        <a href="images/img0.jpg" class="preview-link">
+          <img src="images/img0.jpg" alt="Anteprima Lavoro 8">
+        </a>
+      </div>
+
+
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 <span class="highlight">mdo</span>.video</p>
+  </footer>
+
+  <div id="preview-container">
+    <div class="preview-content">
+      <img id="preview-image" src="" alt="Anteprima">
+      <a class="back-link" onclick="closePreview()">Indietro</a>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+  // Funzione per aprire l'anteprima
+  function openPreview(src) {
+    const previewImage = document.getElementById('preview-image');
+    const previewContainer = document.getElementById('preview-container');
+    previewImage.src = src;
+    previewContainer.style.display = 'flex';
+  }
+
+  // Funzione per chiudere l'anteprima
+  function closePreview() {
+    const previewContainer = document.getElementById('preview-container');
+    previewContainer.style.display = 'none';
+  }
+
+  // Aggiungi evento clic alle immagini
+  document.querySelectorAll('.preview-link').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const src = link.querySelector('img').src;
+      openPreview(src);
+    });
+  });
+</script>
+</body>
+</html>
